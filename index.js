@@ -1,12 +1,12 @@
 const express = require("express");
 
-// const actionRouter = require("./routers/actions");
+const actionRouter = require("./routers/actions");
 const projectRouter = require("./routers/projects");
 
 const app = express();
 app.use(express.json());
 
-// app.use("/actions", actionRouter);
+app.use("/actions", actionRouter);
 app.use("/projects", projectRouter);
 
 app.get("/", (req, res) => {
